@@ -17,6 +17,7 @@
             android:orientation="vertical"
             android:padding="24dp">
 
+            <!-- Logo / Image -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
@@ -24,6 +25,7 @@
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/pngtree_library_logo_vector_icon_illustration_label_symbol_simple_vector_png_image_39896786" />
 
+            <!-- Judul -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,6 +36,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <!-- Email -->
             <TextView
                 android:layout_marginTop="24dp"
                 android:text="Masukkan Email"
@@ -52,6 +55,7 @@
                 android:textSize="16sp"
                 android:padding="12dp"/>
 
+            <!-- Password -->
             <TextView
                 android:layout_marginTop="16dp"
                 android:text="Masukkan Password"
@@ -70,9 +74,10 @@
                 android:textSize="16sp"
                 android:padding="12dp"/>
 
+            <!-- Confirm Password -->
             <TextView
                 android:layout_marginTop="16dp"
-                android:text="Masukkan kembali Password"
+                android:text="Konfirmasi Password"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:layout_width="match_parent"
@@ -83,11 +88,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_form_daftar"
-                android:hint="Password"
+                android:hint="Konfirmasi Password"
                 android:inputType="textPassword"
                 android:textSize="16sp"
                 android:padding="12dp"/>
 
+            <!-- Link ke Login -->
             <TextView
                 android:id="@+id/tvMasuk"
                 android:layout_marginTop="24dp"
@@ -98,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <!-- Tombol Daftar -->
             <Button
                 android:id="@+id/button2"
                 android:layout_marginTop="24dp"
