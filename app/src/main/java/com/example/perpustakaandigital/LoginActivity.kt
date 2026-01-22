@@ -1,4 +1,5 @@
 package com.example.perpustakaandigital
+package com.example.perpustakaandigital.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.perpustakaandigital.R
+import com.example.perpustakaandigital.DashboardActivity
+import com.example.perpustakaandigital.R
+import com.example.perpustakaandigital.RegisterActivity
 import com.example.perpustakaandigital.utils.SessionManager
 
 class LoginActivity : AppCompatActivity() {
@@ -56,6 +60,8 @@ class LoginActivity : AppCompatActivity() {
 
         val savedEmail = sessionManager.getUsername() // Ambil username/email tersimpan
         val savedPassword = sessionManager.getPassword() // Ambil password tersimpan
+        val savedEmail = sessionManager.getUsername()
+        val savedPassword = sessionManager.getPassword()
 
 
         if (email.isEmpty() || password.isEmpty()) {
@@ -72,6 +78,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (email == savedEmail && password == savedPassword) {
             sessionManager.setLogin(true) // Set status login = true
+            sessionManager.setLogin(true)
 
             Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
 

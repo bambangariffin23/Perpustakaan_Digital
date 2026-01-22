@@ -21,6 +21,9 @@ class ChangePasswordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_change_password) // pastikan XML ini sesuai
 
         // 🔗 Inisialisasi view
+        setContentView(R.layout.activity_change_password)
+
+
         etOldPassword = findViewById(R.id.etOldPassword)
         etNewPassword = findViewById(R.id.etNewPassword)
         etConfirmPassword = findViewById(R.id.etConfirmPassword)
@@ -30,6 +33,10 @@ class ChangePasswordActivity : AppCompatActivity() {
         sessionManager = SessionManager(this)
 
         // 🔘 Tombol Simpan Password
+
+        sessionManager = SessionManager(this)
+
+
         btnSavePassword.setOnClickListener {
             changePassword()
         }
@@ -43,6 +50,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         val savedPassword = sessionManager.getPassword() ?: ""
 
         // 🛑 Validasi input kosong
+
         if (oldPassword.isEmpty() || newPassword.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(this, "Semua field wajib diisi", Toast.LENGTH_SHORT).show()
             return
