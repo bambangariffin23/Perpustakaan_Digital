@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.perpustakaandigital.utils.SessionManager
+import com.example.perpustakaandigital.R
 import com.example.perpustakaandigital.activity.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
@@ -71,6 +72,7 @@ class RegisterActivity : AppCompatActivity() {
 
         sessionManager.setUsername(email)
         sessionManager.setPassword(password)
+        sessionManager.setLogin(false) // Status login = false setelah register
         sessionManager.setLogin(false)
 
         Toast.makeText(this, "Registrasi berhasil! Silakan login.", Toast.LENGTH_SHORT).show()

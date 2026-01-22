@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.perpustakaandigital.R
 
 class SearchBookActivity : AppCompatActivity() {
 
@@ -53,4 +54,5 @@ class SearchBookActivity : AppCompatActivity() {
             tvResult.text = "Hasil ditemukan:\n" + result.joinToString("\n")
         }
     }
+}
 }

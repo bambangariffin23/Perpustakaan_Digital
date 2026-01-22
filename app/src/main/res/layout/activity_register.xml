@@ -23,6 +23,128 @@
                 android:layout_height="160dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pp" />
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Daftar"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_marginTop="24dp"
+                android:text="Masukkan Email"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form_daftar"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:layout_marginTop="16dp"
+                android:text="Masukkan Password"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form_daftar"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+
+            <!-- Confirm Password -->
+            <TextView
+                android:layout_marginTop="16dp"
+                android:text="Konfirmasi Password"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form_daftar"
+                android:hint="Konfirmasi Password"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+
+            <!-- Link ke Login -->
+            <TextView
+                android:id="@+id/tvMasuk"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Sudah memiliki akun? Masuk"
+                android:textColor="@color/blue_primary"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Tombol Daftar -->
+            <Button
+                android:id="@+id/button2"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#016CF8"
+                android:text="Daftar"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Logo / Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/pngtree_library_logo_vector_icon_illustration_label_symbol_simple_vector_png_image_39896786" />
 
             <!-- Judul -->
