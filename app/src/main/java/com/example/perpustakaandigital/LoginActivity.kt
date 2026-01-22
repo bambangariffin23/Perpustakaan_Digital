@@ -1,5 +1,4 @@
 package com.example.perpustakaandigital
-package com.example.perpustakaandigital.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +8,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.perpustakaandigital.R
 import com.example.perpustakaandigital.DashboardActivity
 import com.example.perpustakaandigital.R
 import com.example.perpustakaandigital.RegisterActivity
@@ -27,30 +25,26 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         etEmail = findViewById(R.id.editTextLoginEmail)
         etPassword = findViewById(R.id.editTextLoginPassword)
         btnLogin = findViewById(R.id.button)
         tvDaftar = findViewById(R.id.tvDaftar)
 
-
         sessionManager = SessionManager(this)
 
-
+        // Jika sudah login, langsung ke Dashboard
         if (sessionManager.isLogin()) {
             startActivity(Intent(this, DashboardActivity::class.java))
             finish()
             return
         }
 
-
         btnLogin.setOnClickListener {
             login()
         }
 
         tvDaftar.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
@@ -58,31 +52,23 @@ class LoginActivity : AppCompatActivity() {
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
-        val savedEmail = sessionManager.getUsername() // Ambil username/email tersimpan
-        val savedPassword = sessionManager.getPassword() // Ambil password tersimpan
         val savedEmail = sessionManager.getUsername()
         val savedPassword = sessionManager.getPassword()
-
 
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Email dan password wajib diisi", Toast.LENGTH_SHORT).show()
             return
         }
 
-
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(this, "Format email tidak valid", Toast.LENGTH_SHORT).show()
             return
         }
 
-
         if (email == savedEmail && password == savedPassword) {
-            sessionManager.setLogin(true) // Set status login = true
             sessionManager.setLogin(true)
 
             Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
-
-
             startActivity(Intent(this, DashboardActivity::class.java))
             finish()
         } else {
@@ -90,4 +76,3 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
-

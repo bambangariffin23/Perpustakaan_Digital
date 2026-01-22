@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3F2FD">
@@ -19,7 +20,9 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
+            <!-- SEARCH -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -27,15 +30,19 @@
                 app:cardElevation="4dp">
 
                 <EditText
+                    android:id="@+id/et_search"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Cari buku..."
                     android:padding="14dp"
                     android:background="@android:color/transparent"
-                    android:drawableStart="@android:drawable/ic_menu_search"/>
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:inputType="text" />
             </androidx.cardview.widget.CardView>
 
+            <!-- PROFILE -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_profile"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="12dp"
@@ -47,7 +54,8 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_myplaces"
-                    android:tint="#1976D2"/>
+                    app:tint="#1976D2"
+                    android:contentDescription="Profile" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
@@ -64,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/banner_library"
-                tools:src="@drawable/gest_o_de_projetos__o_que___e_como_aplicar___novid_" />
+                tools:ignore="ContentDescription" />
         </androidx.cardview.widget.CardView>
 
         <!-- MENU BUTTONS -->
@@ -75,21 +83,23 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_list_book"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="List Book"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#1976D2"/>
+                android:backgroundTint="#1976D2" />
 
             <Button
+                android:id="@+id/btn_detail_book"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
+                android:layout_marginStart="8dp"
                 android:text="Detail Book"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#1976D2"/>
+                android:backgroundTint="#1976D2" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,30 +109,43 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_borrow_book"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Borrow Book"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#1976D2"/>
+                android:backgroundTint="#1976D2" />
 
             <Button
+                android:id="@+id/btn_history_borrow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
+                android:layout_marginStart="8dp"
                 android:text="History Borrow"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#1976D2"/>
+                android:backgroundTint="#1976D2" />
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_favorite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Favorite"
             android:textColor="@android:color/white"
-            android:backgroundTint="#0D47A1"/>
+            android:backgroundTint="#0D47A1" />
+
+        <!-- CATEGORY BOOK -->
+        <Button
+            android:id="@+id/btn_category_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Category Book"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1976D2" />
 
         <!-- REKOMENDASI -->
         <TextView
@@ -130,21 +153,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Rekomendasi Buku"
-            android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="#0D47A1"/>
+            android:textStyle="bold"
+            android:textColor="#0D47A1" />
 
+        <!-- BOOK VIEW ONLY -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:scrollbars="none">
+            android:scrollbars="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="8dp">
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="133dp"
@@ -157,8 +180,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/atomic_habits"
-                        tools:src="@drawable/atomic_habits" />
+                        android:src="@drawable/atomic_habits" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -172,8 +194,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/sapiens"
-                        tools:src="@drawable/sapiens" />
+                        android:src="@drawable/sapiens" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -187,8 +208,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/book_pramoedya"
-                        tools:src="@drawable/bumi_manusia" />
+                        android:src="@drawable/book_pramoedya" />
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -196,12 +216,3 @@
 
     </LinearLayout>
 </ScrollView>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>

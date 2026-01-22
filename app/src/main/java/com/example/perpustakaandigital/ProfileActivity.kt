@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.perpustakaandigital.R
 import android.widget.TextView
 import com.example.perpustakaandigital.EditProfileActivity
+import com.example.perpustakaandigital.utils.SessionManager
 
 
 class ProfileActivity : AppCompatActivity() {
@@ -14,6 +15,8 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+        val sessionManager = SessionManager(this)
+
 
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnAbout = findViewById<Button>(R.id.btnAbout)
@@ -46,8 +49,11 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnLogout.setOnClickListener {
+            sessionManager.clearSession()
+
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
         btnEdit.setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)

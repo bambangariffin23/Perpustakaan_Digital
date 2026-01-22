@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.perpustakaandigital" >
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.perpustakaandigital">
 
     <application
         android:allowBackup="true"
@@ -13,58 +13,67 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Perpustakaandigital">
+
+        <!-- LAUNCHER / MAIN -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DashboardActivity"
-            android:exported="false" /> <!-- MAIN ACTIVITY -->
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" >
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SearchBookActivity"
-            android:exported="false"
-             />
-        <activity
-            android:name=".DashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChangePasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Semua activity lain -->
+        </activity>
+
+        <!-- ACTIVITY LAIN -->
         <activity
-            android:name=".AboutActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
+
         <activity
-            android:name=".ChangePasswordActivity"
+            android:name=".DashboardActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
         <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
+
         <activity
-            android:name=".CategoryBookActivity"
+            android:name=".ChangePasswordActivity"
             android:exported="false" />
+
         <activity
             android:name=".SearchBookActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".BookByCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryBorrowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BorrowBookActivity"
+            android:exported="false" />
+
         <activity
             android:name=".DetailBookActivity"
             android:exported="false" />
+
         <activity
-            android:name=".RegisterActivity"
+            android:name=".AboutActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".activity.FavoriteBookActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

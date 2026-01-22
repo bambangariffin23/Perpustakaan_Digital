@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.perpustakaandigital.utils.SessionManager
 import com.example.perpustakaandigital.R
-import com.example.perpustakaandigital.activity.LoginActivity
+import com.example.perpustakaandigital.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 
