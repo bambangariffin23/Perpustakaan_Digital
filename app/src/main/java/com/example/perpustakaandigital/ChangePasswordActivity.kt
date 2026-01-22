@@ -1,5 +1,6 @@
 package com.example.perpustakaandigital
 
+import com.example.perpustakaandigital.R
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -17,6 +18,9 @@ class ChangePasswordActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_change_password) // pastikan XML ini sesuai
+
+        // 🔗 Inisialisasi view
         setContentView(R.layout.activity_change_password)
 
 
@@ -25,6 +29,10 @@ class ChangePasswordActivity : AppCompatActivity() {
         etConfirmPassword = findViewById(R.id.etConfirmPassword)
         btnSavePassword = findViewById(R.id.btnSavePassword)
 
+        // 🔑 Inisialisasi SessionManager
+        sessionManager = SessionManager(this)
+
+        // 🔘 Tombol Simpan Password
 
         sessionManager = SessionManager(this)
 
@@ -41,6 +49,7 @@ class ChangePasswordActivity : AppCompatActivity() {
 
         val savedPassword = sessionManager.getPassword() ?: ""
 
+        // 🛑 Validasi input kosong
 
         if (oldPassword.isEmpty() || newPassword.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(this, "Semua field wajib diisi", Toast.LENGTH_SHORT).show()

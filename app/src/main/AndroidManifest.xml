@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.perpustakaandigital" >
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -12,6 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Perpustakaandigital">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" /> <!-- MAIN ACTIVITY -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" >
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
@@ -33,7 +43,28 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Semua activity lain -->
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -4,27 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD">
+    android:background="#F5F9FF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
+
         <Button
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="start"
+            android:backgroundTint="#90CAF9"
             android:text="Kembali"
             android:textAllCaps="false"
-            android:backgroundTint="#90CAF9"
-            android:textColor="#0D47A1"
-            android:layout_marginBottom="12dp" />
+            android:textColor="#0D47A1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Riwayat Peminjaman"
+            android:text="Buku Favorit"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#0D47A1"
@@ -34,20 +36,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="18dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Cover Buku"
+                    android:scaleType="centerCrop"
                     android:src="@android:drawable/ic_menu_gallery"
-                    tools:srcCompat="@drawable/sherlock_holmes" />
+                    tools:srcCompat="@drawable/atomic_habits" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -59,54 +64,51 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="sherlock holmes"
-                        android:textColor="#1565C0"
+                        android:text="Atomic Habbits"
+                        android:textColor="#0D47A1"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:text="Tanggal Pinjam: 01 Mei 2024"
-                        android:textSize="14sp"
-                        android:textColor="#546E7A"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Tanggal Kembali: 08 Mei 2024"
-                        android:textSize="14sp"
-                        android:textColor="#546E7A"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Status: Dikembalikan"
-                        android:textStyle="bold"
-                        android:textColor="#2E7D32"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Disukai: 20 Jan 2026"
+                        android:textColor="#263238"
+                        android:textSize="13sp" />
                 </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:tint="#E53935"
+                    android:contentDescription="Hapus dari favorit" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="18dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Cover Buku"
+                    android:scaleType="centerCrop"
                     android:src="@android:drawable/ic_menu_gallery"
-                    tools:srcCompat="@drawable/sapiens" />
+                    tools:srcCompat="@drawable/laskar_pelangi" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -118,35 +120,31 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="sapiens"
-                        android:textColor="#1565C0"
+                        android:text="Laskar Pelangi"
+                        android:textColor="#0D47A1"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:text="Tanggal Pinjam: 10 Mei 2024"
-                        android:textSize="14sp"
-                        android:textColor="#546E7A"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Tanggal Kembali: -"
-                        android:textSize="14sp"
-                        android:textColor="#546E7A"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Status: Dipinjam"
-                        android:textStyle="bold"
-                        android:textColor="#F57C00"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Disukai: 1 Jan 2026"
+                        android:textColor="#263238"
+                        android:textSize="13sp" />
                 </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:tint="#E53935"
+                    android:contentDescription="Hapus dari favorit" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
 </ScrollView>

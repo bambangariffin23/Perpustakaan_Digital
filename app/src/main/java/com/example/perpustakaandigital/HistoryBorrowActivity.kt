@@ -9,7 +9,6 @@ class HistoryBorrowActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history_borrow)
-
         findViewById<Button>(R.id.btnBack).setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
