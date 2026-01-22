@@ -14,6 +14,7 @@ class SessionManager(context: Context) {
     }
 
     // Ambil username/email
+
     fun getUsername(): String? {
         return prefs.getString("username", null)
     }
@@ -38,6 +39,10 @@ class SessionManager(context: Context) {
     }
 
     // Hapus semua session (opsional logout)
+    fun clearSession() {
+        prefs.edit().clear().apply()
+    }
+}
     fun clearSession() {
         prefs.edit().clear().apply()
     }

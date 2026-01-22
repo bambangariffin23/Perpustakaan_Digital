@@ -20,6 +20,7 @@
             android:layout_marginTop="16dp"
             android:scaleType="fitCenter"
             android:src="@drawable/pp"
+            android:src="@drawable/pngtree_library_logo_vector_icon_illustration_label_symbol_simple_vector_png_image_39896786"
             android:contentDescription="Logo Aplikasi" />
 
         <!-- Judul -->
